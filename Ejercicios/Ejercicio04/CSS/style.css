@@ -1,0 +1,49 @@
+/* Cuando es un id, ponemos delante #*/
+
+#titulo {
+    color: red;
+}
+
+/* Cuando es un id, ponemos delante .*/
+
+.trabajador {
+    
+    background-color: grey;
+    
+}
+
+.datos {
+
+    border-style: solid;
+    border-width: 2px;
+
+    
+}
+
+.estudios {
+
+    border-style: double;
+    border-width: 5px;
+
+}
+
+.subtitulo {
+
+    text-align: center;
+
+}
+
+#subtitulo1 {
+
+    color: blue;
+    font-size: 35px;
+
+}
+
+#subtitulo2 {
+
+    color: green;
+    font-size: 35px;
+
+
+}
