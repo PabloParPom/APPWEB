@@ -1,0 +1,15 @@
+body {
+    background-color: #f4f4f4;
+    min-height: 100vh;
+}
+
+.menu-arriba {
+    background-color: #8b5d5d;
+
+}
+
+.menu-arriba-ul{
+
+    list-style: none;
+    display: flex;        /*Usamos flex para alinear los elementos de una lista*/
+}
