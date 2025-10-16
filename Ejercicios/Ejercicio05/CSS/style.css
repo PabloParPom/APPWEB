@@ -1,0 +1,62 @@
+body{
+
+font-family: 'Times New Roman', Times, serif;
+}
+
+body p{
+    color: #000;
+    font-size: 16px;
+}
+
+body ul li{
+    color: #000;
+    font-size: 16px;
+}
+
+
+h1{
+    color: #333;
+    font-size: 20px;
+}
+
+h2{
+    color: #666;
+    font-size: 16px;
+}
+
+.sitio-web{
+
+    color: blue;
+    font-size: 16px;
+}
+
+.titulo-tabla{
+
+    color: #000;
+    font-size: 14px;
+    
+}
+
+table{
+border: 1px solid black;
+border-collapse: collapse;
+}
+
+th{
+    border: 1px solid black;
+    color: white;
+    background-color: #666;
+    font-size: 16px;
+}
+
+td{
+    border: 1px solid black;
+    padding: 10px;
+    background-color: #fff;
+    color: #000;
+    font-size: 16px;
+}
+
+.pie-tabla{
+    background-color: #ccc;
+}
