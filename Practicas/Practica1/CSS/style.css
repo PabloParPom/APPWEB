@@ -35,8 +35,9 @@ footer{
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     max-width: 800px;
     text-align: center;
-    
     border-radius: 10px;
+    padding: 10px;
+    margin: 0 auto;
 }
 
 .imagen-receta img{
@@ -49,6 +50,7 @@ footer{
 .carasteristicas ul{
     list-style-type: square;
     padding-left: 20px;
+    text-align: left;
 }
 
 .carasteristicas ul li{
@@ -68,6 +70,7 @@ footer{
 .ingredientes table{
     width: 100%;
     border-collapse: collapse;
+    border-radius: 10px;
 }
 
 .ingredientes table thead{
@@ -77,14 +80,25 @@ footer{
     padding: 0.75rem 1rem;
     font-weight: bold;
     text-align: center;
+    
 }
+
+
 
 .ingredientes table tbody{
 
     padding: 0.65rem 1rem;
-    border-bottom: 1px solid #333;
-    font-weight: bold;
     text-align: center;
+
+}
+.ingredientes table tbody td{
+
+    border-bottom: 1px solid #eee;
+
+}
+
+tbody:last-child{
+    border-bottom: solid transparent;
 
 }
 
@@ -92,13 +106,17 @@ tr:nth-child(even) {
   background-color: #fafafa;
 }
 
-h1{
+
+.receta h1{
     color: #F5A623;
     text-align: center;
 }
 
-h2{
+.receta h2{
     color: #F5A623;
 }
 
+.receta h3{
+    text-align: left;
+}
 
