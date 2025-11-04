@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página web sobre videojuegos">
+    <link rel="stylesheet" href="../estilos.css">
+
+</head>
+<body>
+    <header class="cabecera">
+        <div class="brand">
+            <img src="../imagenes/gamezone-logo.png" alt="Imagen GameZone" class="logo">
+            <!-- <h1 class="titulo">GameZone</h1> -->
+        </div>
+
+          <!-- Menú de navegación -->
+        <nav class="navegacion">
+        <ul class="menu">
+            <li><a href="/Ejemplos/GameZone/index.html">Inicio</a></li>
+            <li><a href="#">Noticias</a></li>
+            <li><a href="#">Guias</a></li>
+            <li><a href="/Ejemplos/GameZone/pages/registro.html">Registro</a></li>
+            <li><a href="/Ejemplos/GameZone/pages/contacto.html">Contacto</a></li>
+        </ul>
+        </nav>
+    </header>
+
+
+    
+    <main id="contenido-principal">
+        <!-- Formulario de registro con varios tipos de campos -->
+            <section class="tarjeta">
+                <h2>Registro de usuario</h2>
+                <form name="register"action="registro.html" method="post" class="form-registro">
+    
+                    <fieldset>
+                        <legend>Datos de registro</legend>
+                        <!-- Campo de texto -->
+                        <div class="form-filas">
+
+                            <label for="nombre">Nombre de usuario:</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Nombre y Apellidos" required> <!-- Required convierte el campo en obligatorio -->
+                        </div>
+
+                        <div class="form-filas">
+
+                            <!-- Contraseña -->
+                            <label for="clave">Contraseña:</label>
+                            <input type="password" id="clave" name="clave" minlength="6" maxlength="12" required> <!-- minlength y maxlength ayuda a  -->
+            
+                        </div>
+
+                        <div class="form-filas">
+
+                            <!-- campo de email -->
+                        <label for="correo">Email:</label>
+                        <input type="email" id="correo" name="correo" placeholder="ejemplo@gmail.com" required>
+                        </div>
+        
+                        <div class="form-filas">
+                            
+                            <!-- Campo DNI/NIE -->
+                            <label for="dni">DNI o NIE</label>
+                            <input type="text" id="dni" name="identidad" placeholder="12345678A/X1234567L"
+                            pattern="(([0-9]{8})|([X-Zx-z]{1}[0-9]{7}))[A-Za-z]{1}" required>
+                        </div>
+
+        
+                        <!-- Botón de envio -->
+                        <div class="form-filas botones">
+                            <button type="submit">Registrarse</button>
+                        </div>
+                    </fieldset>
+
+                    
+    
+                </form>
+            </section>
+
+
+
+
+    </main>
+
+    <footer class="pie">
+        <p>&copy; 2025 Todos los derechos Reservados.</p>
+    </footer>
+    
+</body>
+</html>

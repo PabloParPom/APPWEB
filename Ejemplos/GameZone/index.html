@@ -18,10 +18,11 @@
           <!-- Menú de navegación -->
         <nav class="navegacion">
         <ul class="menu">
-            <li><a href="#">Inicio</a></li>
+            <li><a href="/Ejemplos/GameZone/index.html">Inicio</a></li>
             <li><a href="#">Noticias</a></li>
             <li><a href="#">Guias</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="/Ejemplos/GameZone/pages/registro.html">Registro</a></li>
+            <li><a href="/Ejemplos/GameZone/pages/contacto.html">Contacto</a></li>
         </ul>
         </nav>
     </header>
@@ -86,6 +87,46 @@
             </table>
 
         </section>
+        <!-- Formulario de búsqueda -->
+        <section class="tarjeta">
+            <form name="buscar-juego" action="buscar.html" method="get">
+                <!-- Label conecta visualmente y funcionalmente con el campo (for <-> id)
+                Sirve para asociar un texto descriptivo a un elemento de formulario.
+                En este ejemplo lo conectamos con el input busqueda -->
+                <label for="busqueda">Buscar Juego:</label>
+                
+                <input type="search" id="busqueda" name="busqueda" 
+                placeholder="Escribe el nombre del juego..."> <!-- Ofrece una ayuda visual -->
+                
+                <button type="submit">Buscar </button>
+
+
+            </form>
+        </section>
+
+        <section class="tarjeta">
+            <form action="contacto.php" method="get">
+                <!-- Para agrupar varios campos del formulario -->
+                <fieldset>
+                    <legend>Lista desplegable</legend>  <!-- Para leyenda al fieldset -->
+                    <label for="categoria">Categoria:</label>
+                    <select name="categoria" id="categoria">
+                        <option selected disabled>Selecciona una opción</option>
+                        <option value="fantasia">Fantasía</option>
+                        <option value="rol">Rol</option>
+                        <option value="aventuras">Aventuras</option>
+                        <option value="lucha">Lucha</option>
+                    </select>
+                </fieldset>
+
+                
+
+            </form>
+
+
+        </section>
+        
+
 
     </main>
 
@@ -94,4 +135,6 @@
         <p>&copy; 2025 Todos los derechos Reservados.</p>
     </footer>
 </body>
+
+
 </html>

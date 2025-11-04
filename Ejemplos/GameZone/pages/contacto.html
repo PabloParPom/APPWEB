@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página web sobre videojuegos">
+    <link rel="stylesheet" href="../estilos.css">
+</head>
+<body>
+    <header class="cabecera">
+        <div class="brand">
+            <img src="../imagenes/gamezone-logo.png" alt="Imagen GameZone" class="logo">
+            <!-- <h1 class="titulo">GameZone</h1> -->
+        </div>
+
+          <!-- Menú de navegación -->
+        <nav class="navegacion">
+        <ul class="menu">
+            <li><a href="/Ejemplos/GameZone/index.html">Inicio</a></li>
+            <li><a href="#">Noticias</a></li>
+            <li><a href="#">Guias</a></li>
+            <li><a href="/Ejemplos/GameZone/pages/registro.html">Registro</a></li>
+            <li><a href="/Ejemplos/GameZone/pages/contacto.html">Contacto</a></li>
+        </ul>
+        </nav>
+    </header>
+    <main id="contenido-principal">
+
+        <fieldset>
+                    <legend>Input tipo radio</legend>
+                    <p>Selecciona la plataforma: </p>
+                    <input type="radio" name="plataforma" id="pc" value="pc">
+                    <label for="pc">PC</label>
+                    <br>
+
+                    <input type="radio" name="plataforma" id="ps5" value="play5">
+                    <label for="ps5">PS5</label>
+                    <br>
+                
+                    <input type="radio" name="plataforma" id="nintendo" value="nintendo">
+                    <label for="nintendo">Nintendo</label>
+                    <br>
+
+                </fieldset>
+                <fieldset>
+                    <legend>Input tipo checkbox</legend>
+                    <p>Selecciona la plataforma: </p>
+                    <input type="checkbox" name="videoconsola" id="pc" value="pc">
+                    <label for="pc">PC</label>
+                    <br>
+
+                    <input type="checkbox" name="videoconsola" id="ps5" value="play5">
+                    <label for="ps5">PS5</label>
+                    <br>
+                
+                    <input type="checkbox" name="videoconsola" id="nintendo" value="nintendo">
+                    <label for="nintendo">Nintendo</label>
+                    <br>
+                </fieldset>
+                <fieldset>
+                    <legend>Campo tipo fecha</legend>
+                    <label for="fecha">Fecha</label>
+                    <input type="date" name="Fecha" id="fecha">
+
+                    <label for="fecha-hora">Fecha y hora</label>
+                    <input type="datetime-local" name="Fecha" id="fecha-hora">
+                </fieldset>
+                <textarea name="mensaje" id="mensaje" cols="30" rows="5" placeholder="Deja aqui su texto..."></textarea>
+
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpiar formulario">
+
+    </main>
+
+    <footer class="pie">
+        <p>&copy; 2025 Todos los derechos Reservados.</p>
+    </footer>
+</body>
+</html>
