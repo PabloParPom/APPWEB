@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incidencia de clase</title>
+    <meta name="author" content="Pablo Parejo Pomares">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+    <body>
+        
+        <header class="cabecera">
+            <img src="imagenes/IAT-LOGOTIPO.jpg" alt="Logotipo Alan Turing">
+        </header>
+        
+        
+        <main class="contenido-principal">
+
+        </main>
+            
+            <form action="">
+                <fieldset>
+
+                    <legend> Nueva Incidencia </legend>
+    
+                    <div>
+                        <label for="profesor">Profesor *: </label>
+                        <input type="text" id="profesor" name="profesor" placeholder="Introduzca su nombre aquí." required>
+                    </div>
+    
+                    <div>
+                        <label for="correo">Correo electrónico *: </label>
+                        <input type="text" id="correo" name="correo" placeholder="Introduzca su correo electronico aquí." required>
+                    </div>
+    
+                    <div>
+                        <label for="departamento">Departamento *: </label>
+                        <select type="radio button" id="departamento" name="departamento" required>
+                            <option value="informatica">informática</option>
+                            <option value="reparación">informática</option>
+                            <option value="programacion">programación</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="aula">Aula *: </label>
+                        <input type="text" id="aula" name="aula" placeholder="Indica aquí el aula de la incidencia." required>
+                    </div>
+
+                    <div>
+                        <label for="diaIncidendia">Dia de la incidencia *:</label>
+                        <input type="date" id="diaIncidencia" name="diaIncidencia" required>
+                    </div>
+    
+                    <div>
+                        <label for="horaIncidendia">Hora de la incidencia *:</label>
+                        <input type="time" id="horaIncidencia" name="horaIncidencia" required>
+                    </div>
+
+                    <div>
+                        <label for="descripcion">Descripción de la incidencia *:</label>
+                        <textarea id="descripcion" name="descripcion" cols="20" rows="2" placeholder="Deja aqui su texto..." required></textarea>
+                    </div>
+
+                    <div>
+                        <label for="imagen">Imagen de la incidencia (opcional)</label> <br>
+                        <input type="file" id="imagen" name="imagen">
+                        
+                    </div>
+
+                    <div class="form-final botones">
+                        <button type="submit">Enviar formulario</button>
+                    </div>
+                    <div class="form-final botones">
+                        <button type="reset">Restablecer formulario</button>
+                    </div>
+                    
+
+                </fieldset>
+
+            </form>
+
+        <footer>
+            <h3>Síguenos</h3>
+
+                <img src="imagenes/icons8-facebook-48.png" alt="facebook_alan-turing">
+                <img src="imagenes/icons8-twitter-48.png" alt="twitter_alan-turing">
+                <img src="imagenes/icons8-instagram-48.png" alt="instagram_alan-turing">
+                <img src="imagenes/icons8-youtube-48.png" alt="youtube_alan-turing">
+                <img src="imagenes/icons8-website-48.png" alt="website_alan-turing" >
+        </footer>
+
+
+
+
+    </body>
+</html>
