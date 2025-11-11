@@ -184,7 +184,7 @@ input{
 }
 
 
-/* ----- FORMULARIO DE REGISTRO ----- */
+/* ----------- FORMULARIO DE REGISTRO ----------- */
 
 .form-registro{
 
@@ -230,3 +230,104 @@ button[type="submit"] {
 button[type="submit"]:hover{
    background-color: darkred;
 }
+
+
+
+
+/* 
+    ======================
+        SECCION TIENDA
+    ======================
+*/
+
+/* Aplicar estos estilos solo a los elementos que tengan las clases tienda y tarjeta a la vez */
+
+.tienda.tarjeta{
+    width: min(1600px, 95%);
+}
+
+.lista-cards--flex{
+    display: flex;                  /* Activo el modelo Flex */
+    /* flex-direction: row; */      /* Es el valor por defecto igualmente */
+    flex-wrap: wrap;                /*  */
+    gap: 16px;                      /* Espacio uniforme entre las cards */
+    justify-content: center;        /* Centrar horizontalmente */
+
+}
+
+/* Card individual */
+.card {
+    width: 280px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    text-align: center;
+    padding: 12px;
+}
+
+/* Imagen de la card */
+.card-imagen{
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+/* Explicación object-fit: conain asegura que la imagen se vea completa
+    aunque tenga proporciones diferentes, evitando recortes o deformaciones
+*/
+
+/* Textos */
+
+.card-titulo{
+    font-size: 1.1rem;
+    color: #333;
+    margin: 8px 0 4px;
+}
+
+.card-descripcion{
+    font-size: 0.9rem;
+    color: #666;
+    min-height: 3.5em;        /* Mantiene altura uniforme aunque cambie el texto */
+}
+
+.card-precio{
+    color: #b60000;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+/* Botón de la card */
+.card-boton{
+    background-color: #2C3E50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-block;          
+    padding: 10px 16px;
+}
+/*
+    Se comporta como inline (se coloca en línea) pero permite aplicar propiedades de bloque (ancho, alto, margin, padding)
+    Si no lo hubieramos puesto, no saltaría de línea, no puedes definir width, height, ni margin-top/bottom
+
+*/
+
+.grid-container{
+    display: grid;          /* Activa el modo grid */
+    grid-template-columns: 200px 200px 200px;       /* 3 columnas de tamaño fijo */
+    grid-template-rows: 100px 100px;                /* 2 filas de tamaño fijo */
+    gap: 10px;                                      /* Separación uniforme entre celdas */
+    justify-content: center;                        /* Centra toda la cuadricula dentro del section */
+    background-color: #eaeaea;
+    padding: 10px;
+}
+
+.grid-container :nth-child(1) {background-color: #E74C3C;}
+.grid-container :nth-child(2) {background-color: indigo;}
+.grid-container :nth-child(3) {background-color: gold;}
+.grid-container :nth-child(4) {background-color: aquamarine;}
+.grid-container :nth-child(5) {background-color: green;}
+.grid-container :nth-child(6) {background-color: darkred;}

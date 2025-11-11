@@ -1,14 +1,22 @@
+
+
+html, body{
+    height: 100%;
+}
+
+
 body {
     height: 100%;
     margin: 0px;
-    
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 .cabecera {
     text-align: center;
-    vertical-align: middle;
+    align-items: center;
     padding: 1rem;
 }
 
@@ -19,10 +27,47 @@ body {
 
 main{
     padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
+.form-incidencia fieldset{
+    background-color: #f4f1ed;
+    color: firebrick;
+    border: 3px solid darkgoldenrod;
+    border-radius: 7px;
+    width: 400px;
+}
 
+.form-leyenda{
+    color: darkblue;
+    font-weight: bold;
+}
 
+.formulario-filas{
+    display: flex;
+    flex-direction: row; 
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.pruebas{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.final-boton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+}
 
 
 footer{
@@ -31,4 +76,9 @@ footer{
     text-align: center;
     padding: 5px;
     
+}
+
+footer img{
+    width: 48px;
+    height: 48px;
 }
