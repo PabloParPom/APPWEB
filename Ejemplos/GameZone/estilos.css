@@ -242,7 +242,7 @@ button[type="submit"]:hover{
 
 /* Aplicar estos estilos solo a los elementos que tengan las clases tienda y tarjeta a la vez */
 
-.tienda.tarjeta{
+.tienda .tarjeta{
     width: min(1600px, 95%);
 }
 
@@ -305,9 +305,9 @@ button[type="submit"]:hover{
     background-color: #2C3E50;
     color: #fff;
     text-decoration: none;
-    border-radius: 8px;
-    display: inline-block;          
-    padding: 10px 16px;
+    border-radius: 5px;
+    display: inline-block;  
+        
 }
 /*
     Se comporta como inline (se coloca en línea) pero permite aplicar propiedades de bloque (ancho, alto, margin, padding)
@@ -316,18 +316,101 @@ button[type="submit"]:hover{
 */
 
 .grid-container{
+    min-height: 400px;
     display: grid;          /* Activa el modo grid */
-    grid-template-columns: 200px 200px 200px;       /* 3 columnas de tamaño fijo */
-    grid-template-rows: 100px 100px;                /* 2 filas de tamaño fijo */
-    gap: 10px;                                      /* Separación uniforme entre celdas */
-    justify-content: center;                        /* Centra toda la cuadricula dentro del section */
+
     background-color: #eaeaea;
+
+    /* Definir numero de columnas */
+    grid-template-columns: 75px 125px 100px;       /* 3 columnas de tamaño fijo */
+    /* Definir número de filas */
+    grid-template-rows: 100px 100px;                /* 2 filas de tamaño fijo */
+    
+    /* Añadir espacio entre celdas y filas */
+    row-gap: 5px;
+    column-gap: 30px;
+
+    /* Atajo gap: row-gap + column-gap */
+    /* gap: 5px 30px;*/
+    
+    
+    /* Alineación de los items respecto de su celda */
+    /* justify-items: center;
+    align-items: end; */
+    place-items: stretch;          /* Atajo place-items = align-items + justify-items */
+
+    
+    justify-content: center;                        /* Centra toda la cuadricula dentro del section */
+    align-content: center;
+
     padding: 10px;
+
+
+
 }
 
-.grid-container :nth-child(1) {background-color: #E74C3C;}
+.item-grid{background-color: aquamarine;}
+
+.item-5{
+    background-color: green;
+    justify-self: center;
+    align-self: center;
+}
+
+/* .grid-container :nth-child(1) {background-color: #E74C3C;}
 .grid-container :nth-child(2) {background-color: indigo;}
 .grid-container :nth-child(3) {background-color: gold;}
 .grid-container :nth-child(4) {background-color: aquamarine;}
 .grid-container :nth-child(5) {background-color: green;}
-.grid-container :nth-child(6) {background-color: darkred;}
+.grid-container :nth-child(6) {background-color: darkred;} */
+
+.contenedor-areas{
+    display: grid;
+
+    min-height: 400px;
+    /* Fijamos número de columnas y filas */
+    grid-template-columns: 200px 3fr 1fr;
+    grid-template-rows: 2fr 5fr 1fr;
+
+    /* Plantilla de áreas - Disposición del grid */
+    grid-template-areas:
+             "cabecera  cabecera    cabecera" 
+             "menu      principal   lateral" 
+             "pie       pie         pie";
+    
+    gap: 15px;
+
+
+
+}
+
+.area-header{
+    /* Asignamos nombre de área para el grid */
+    grid-area: cabecera;
+    background-color: blue;
+}
+
+.area-menu{
+    /* Asignamos nombre de área para el grid */
+    grid-area: menu;
+    background-color: green;
+    color: white;
+}
+
+.area-main{
+    /* Asignamos nombre de área para el grid */
+    grid-area: principal;
+    background-color: goldenrod;
+}
+
+.area-aside{
+    /* Asignamos nombre de área para el grid */
+    grid-area: lateral;
+    background-color: aquamarine;
+}
+
+.area-footer{
+    /* Asignamos nombre de área para el grid */
+    grid-area: pie;
+    background-color: red;
+}
