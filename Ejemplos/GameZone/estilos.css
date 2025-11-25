@@ -257,7 +257,7 @@ button[type="submit"]:hover{
 
 /* Card individual */
 .card {
-    width: 280px;
+    width: 100%;
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -413,4 +413,98 @@ button[type="submit"]:hover{
     /* Asignamos nombre de área para el grid */
     grid-area: pie;
     background-color: red;
+}
+
+
+/*
+=========================================================
+                    SECCION JUEGOS
+=========================================================
+*/
+
+
+.juegos.tarjeta{
+    width: min(1600px, 95%);
+}
+
+.lista-cards--grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    /* minmax(280, 1fr):
+        - Nunca menos de 280px
+        - Si hay espacio disponible, lo llena hasta ocupar el espacio sobrante 
+    
+       auto-fill:
+       - Intenta "llenar" la fila con el MÁXIMO número de columnas posibles.
+       - Si no puede, quedarán huecos vacios
+       auto-fit:
+       - Colapsar los huevos vacíos, provocando que las cards se estiren y se AJUSTEN.
+       
+
+
+    */
+    gap: 16px;
+}
+
+/* .card-destacada{
+    background-color: #73a4d5;
+    grid-column: 2 / span 2;
+
+} */
+
+.celdas-irregulares{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    border: 1px solid black;
+    gap: 10px;
+}
+
+.item-1{ 
+    background-color: blue;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    /* Atajo */
+    grid-column: 1 / 3;
+
+    grid-row-start: 1;
+    grid-row-end: 3;
+    /* Atajo */
+    grid-row: 1 / 3;
+}
+.item-2{ 
+    background-color: yellow;
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+}
+.item-3{ 
+    background-color: red;
+    grid-column: 1 / 5;
+    grid-row: 3 / 4;
+}
+
+/* DISEÑO RESPONSIVO */
+/* Media queries para móviles */
+@media (width <= 380px) {
+    
+    .juegos.tarjeta{
+        width: 95%;
+    }
+
+    /* 1 sola columna flexible de juegos */
+    .lista-cards--grid{
+        grid-template-columns: minmax(220px, 1fr) ;
+    }
+}
+/* Media queries para tablets */
+@media (width <= 380px) and (width > 1024px) {
+    
+    .juegos.tarjeta{
+        width: min(1000px, 95%);
+    }
+
+    /* 1 sola columna flexible de juegos */
+    .lista-cards--grid{
+        grid-template-columns: repeat(2, minmax(220px, 1)) ;
+    }
 }
